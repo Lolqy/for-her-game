@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <title>Hello, Beautiful</title>
+</head>
+<body>
+    <div class="container">
+        <h1>For You</h1>
+        <div class="flower">
+            <div class="petal"></div><div class="petal"></div>
+            <div class="petal"></div><div class="petal"></div>
+        </div>
+        <p>A little something I made just for you.</p>
+    </div>
+    <br>
+
+    <div id="ready-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you ready to play a game?</p>
+            <button onclick="window.location.href='index.html'">LESSGOO</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('ready-modal').style.display = 'flex';
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

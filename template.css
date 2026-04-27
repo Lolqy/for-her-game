@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #f0f0f0;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+
+.flower {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 30px auto;
+}
+
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ff7eb3;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg); top: 0; left: 15px; }
+.petal:nth-child(2) { transform: rotate(90deg); top: 15px; left: 30px; }
+.petal:nth-child(3) { transform: rotate(180deg); top: 30px; left: 15px; }
+.petal:nth-child(4) { transform: rotate(270deg); top: 15px; left: 0px; }
+
+h1 { font-family: 'Georgia', serif; font-weight: 300; }
+
+
+
+/* Styling for the button inside the modal */
+.modal-content button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: transparent;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+/* The Hover Effect */
+.modal-content button:hover {
+    background: #f0f0f0;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05); /* Slightly grows the button for "fun" feedback */
+}
+
+
+.modal-content {
+    background: #892b2b;
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    
+    /* Center the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: transparent;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    
+    /* Ensure it doesn't stretch full width */
+    width: fit-content; 
+}
+
+.modal-content button:hover {
+    background: #f0f0f0;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
